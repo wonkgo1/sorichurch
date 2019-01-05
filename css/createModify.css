@@ -1,0 +1,15 @@
+#txt_field {
+	width: 99.25%;
+	font-size: 25px;
+}
+form {
+  text-align: center;
+}
+#submit_button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}

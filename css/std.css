@@ -1,0 +1,461 @@
+@import url('header.css');
+#content {
+  margin-top: 15px;
+}
+#content > div > div:first-child {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  #content > div:first-child {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  /* css for side navi bar */
+  #content > div > div:first-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;
+  }
+  #content > div > div:first-child > p {
+  	width:75%;
+  	font-size:15px;
+  	margin-left:8.3%;
+  	text-align:left;
+    padding-top: 10px;
+  	padding-bottom: 10px;
+  	border-bottom:1px dotted grey;
+  }
+  #content > div > div:first-child p {
+  	color:#67b7ff;
+  	text-decoration:none;
+  }
+  #content > div > div:first-child p a:link,
+  #content > div > div:first-child p a:visited {
+  	color:grey;
+  	text-decoration:none;
+  }
+  #content > div > div:first-child p a:hover {
+  	color:tomato;
+  }
+  #content > div > div:first-child > p:first-child {
+    border-radius:5px;
+  	width:75%;
+  	height:50px;
+    line-height: 50px;
+  	background-color:#67b7ff;
+  	color:white;
+  	font-size:27px;
+  	text-align:left;
+  	padding-left:8.3%;
+    margin-left: 0;
+    border: 0;
+  }
+
+  #content > div > div:last-child {
+    display:inline-block;
+    width: 75%;
+  }
+}
+
+/* css for one specific article */
+#pageNameTagInArticle {
+  font-size: 3.5vw;
+  width: 90%;
+  line-height: 110%;
+  margin: 0 auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+#pageNameTagInArticle a,
+#pageNameTagInArticle a:visited {
+  color: blue;
+  text-decoration: none;
+}
+#pageNameTagInArticle img {
+  float: left;
+  height: 3.5vw;
+  padding-right: 1vw;
+}
+@media screen and (min-width: 800px) {
+  #pageNameTagInArticle {
+    width: 100%;
+    padding: 0;
+  }
+  #pageNameTagInArticle img {
+    height: 16px;
+    padding-right: 5px;
+  }
+}
+
+#title {
+  font-weight: 600;
+  font-size: 6vw;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2vw;
+  overflow: auto;
+}
+#title p {
+  width: 95%;
+  float: left;
+}
+#title span {
+  position: relative;
+  display: inline-block;
+  background: none;
+  width: 2%;
+  font-size: 6vw;
+}
+#title span a,
+#title span a:visited {
+  text-decoration: none;
+  color: black;
+}
+#title div {
+  display: none;
+  position: absolute;
+  width: 20%;
+  right: 5%;
+  color: white;
+  text-align: center;
+  padding: 2vw 2vw 2vw 2vw;
+  font-size: 4vw;
+  background-color: black;
+  z-index: 2;
+}
+#title div button {
+  background: white;
+  font-size: 4vw;
+  padding: 0 1vw 0 1vw;
+  color: black;
+}
+#title div button:first-child {
+  margin-right: 10px;
+}
+@media screen and (min-width: 500px) {
+  #pageNameTagInArticle {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+  #title span {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #title {
+    width: 100%;
+    padding-top: 5px;
+  }
+  #title span,
+  #title div {
+    display: none;
+  }
+}
+
+#closeSetup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index; 1;
+}
+
+#forumInfo {
+  width: 90%;
+  font-size: 4vw;
+  margin: 0 auto;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border-bottom: 1px dotted grey;
+}
+#forumInfo span:last-child {
+  float: right;
+}
+@media screen and (min-width: 500px) {
+  #forumInfo {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #forumInfo {
+    width: 100%;
+  }
+}
+
+#article {
+  padding-top: 2%;
+  padding-bottom : 2%;
+  width: 90%;
+  margin: 0 auto;
+}
+#article img {
+  max-width: 100%;
+}
+#create {
+  float: right;
+  border: none;
+  background-color: grey;
+  color: white;
+}
+#modify {
+  border: none;
+  background-color: grey;
+  color: white;
+}
+#delete {
+  float: right;
+  background-color: grey;
+  color: white;
+}
+@media screen and (min-width: 800px) {
+  #article {
+    width: 100%;
+  }
+}
+
+/* css for list */
+#pageNameTag {
+  color: white;
+  font-size: 6vw;
+  background-color: #F0AF4E;
+  width: 92%;
+  padding: 4%;
+}
+@media screen and (min-width: 500px) {
+  #pageNameTag {
+    font-size: 25px;
+    width: 93%;
+    padding: 3%;
+    padding-left: 4%;
+  }
+}
+@media screen and (min-width: 800px) {
+  #pageNameTag {
+    color: black;
+    background: none;
+    border-bottom: 1px dotted grey;
+    width: 100%;
+    padding: 25px 0 20px 0;
+  }
+}
+
+#articleListTop {
+  border-top: 2px solid grey;
+  border-bottom: 1px dotted grey;
+  width: 90%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  font-size: 4vw;
+  margin: 0 auto;
+  margin-top: 4vw;
+}
+#articleListTop span {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0;
+}
+#articleListTop > #num_top {
+  width: 10%;
+  text-align: center;
+  display:inline-block;
+}
+#articleListTop > #title_top {
+  width: 88%;
+  text-align: center;
+  display:inline-block;
+}
+#articleListTop > #name_top {
+  display: none;
+  text-align: center;
+}
+#articleListTop > #date_top {
+  display: none;
+  text-align: center;
+}
+@media screen and (min-width: 500px) {
+  #articleListTop > span {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #articleListTop {
+    border-top: 0;
+    border-bottom: 1px dotted grey;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: #f9f9fb;
+  }
+  #articleListTop > span {
+    font-size: 16px;
+  }
+  #articleListTop > #num_top {
+    display: inline-block;
+  }
+  #articleListTop > #title_top {
+    display: inline-block;
+    width: 57.5%;
+  }
+  #articleListTop > #name_top {
+    display: inline-block;
+    width: 15%;
+  }
+  #articleListTop > #date_top {
+    display: inline-block;
+    width: 15%;
+  }
+}
+
+.articleLink {
+  color: black;
+  text-decoration: none;
+}
+.articleList {
+  width: 90%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  margin: 0 auto;
+  border-bottom: 1px dotted grey;
+}
+.articleList .num {
+  display: inline-block;
+  font-size: 4vw;
+  width: 10%;
+  line-height: 9vw;
+  text-align: center;
+  float: left;
+}
+.articleList .title {
+  display: inline-block;
+  font-size: 4vw;
+  width: 87%;
+  line-height: 5vw;
+  padding-left: 3%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.articleList .name {
+  display: inline-block;
+  font-size: 3vw;
+  line-height: 3vw;
+  padding-left: 3%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.articleList .name:after {
+  content: ' | ';
+}
+.articleList .date {
+  display: inline-block;
+  font-size: 3vw;
+  line-height: 3vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 500px) {
+  .articleList {
+    width: 90%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin: 0 auto;
+    border-bottom: 1px dotted grey;
+  }
+  .articleList .num,
+  .articleList .title {
+    font-size: 18px;
+  }
+  .articleList .name,
+  .articleList .date {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .articleList {
+    width: 100%;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .articleList:hover {
+    color: tomato;
+  }
+  .articleList .num {
+    line-height: 16px;
+    font-size: 16px;
+    width: 10%;
+    display: inline-block;
+  }
+  .articleList .title {
+    width: 58.5%;
+    line-height: 18px;
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .articleList .name {
+    width: 15%;
+    line-height: 16px;
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .articleList .name:after {
+    content: '';
+  }
+  .articleList .date {
+    width: 15%;
+    line-height: 16px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* css for page numbers */
+#pageNum a,
+#pageNum a:visited {
+  color: black;
+  text-decoration: none;
+}
+#pageNum a.currentPage {
+  color: tomato;
+}
+#pageNum {
+  font-size: 4vw;
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+@media screen and (min-width: 500px) {
+  #pageNum {
+    font-size: 15px;
+  }
+}
+
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}

@@ -1,0 +1,111 @@
+@import url('header.css');
+
+#content > div > div:last-child > div {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  #content > div > div:last-child > div {
+    width: 100%;
+  }
+}
+
+#pastor_img {
+  margin-top: 5px;
+  width: 30vw;
+  float: left;
+}
+
+#pastor_resume p {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#pastor_name {
+  display:inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: blue;
+  font-size: 7vw;
+}
+#pastor_title {
+  color: black;
+  font-size: 4vw;
+}
+@media screen and (min-width: 800px) {
+  #pastor_resume {
+    width: 30%;
+    padding-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+  }
+  #pastor_img {
+    width: 100%;
+    float: none;
+  }
+  #pastor_name {
+    font-size: 35px;
+    margin-left: 0;
+  }
+  #pastor_title {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  #pastor_resume p {
+    white-space: pre-line;
+    border: 0;
+  }
+  #pastor_resume p:nth-child(3) span,
+  #pastor_resume p:nth-child(4) span,
+  #pastor_resume p:nth-child(5) {
+    display: inline-block;
+    border-bottom: 1px dotted grey;
+  }
+  #pastor_resume p:nth-child(3) span:last-child,
+  #pastor_resume p:nth-child(4) span:last-child {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+}
+
+.resume {
+  display: inline-block;
+  color: grey;
+  font-size: 3.5vw;
+  clear: both;
+  border-bottom: 1px dotted grey;
+}
+@media screen and (min-width: 500px) {
+  .resume {
+    line-height: 120%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .resume {
+    font-size: 16px;
+  }
+}
+
+#content > div > div > div:last-child > div:last-child > p {
+  margin-top: 10px;
+  font-size: 4vw;
+  line-height: 150%;
+}
+#content > div > div > div:last-child > div:last-child > p:last-child {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 500px) {
+  #content > div > div > div:last-child > div:last-child > p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #content > div > div > div:last-child > div:last-child {
+    width: 60%;
+    display: inline-block;
+  }
+  #content > div > div > div:last-child > div:last-child > p {
+    color: grey;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,77 @@
+.gallery_panel {
+  cursor: pointer;
+  width: 40%;
+  padding-top: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: inline-block;
+}
+.gallery_panel:hover {
+  width: 50%;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 500px) {
+  .gallery_panel {
+    width: 27%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .gallery_panel:hover {
+    width: 33%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.gallery_panel div {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.gallery_panel div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery_panel p {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+
+/* css for page numbers */
+#pageNum a,
+#pageNum a:visited {
+  color: black;
+  text-decoration: none;
+}
+#pageNum a.currentPage {
+  color: tomato;
+}
+#pageNum {
+  font-size: 4vw;
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+@media screen and (min-width: 500px) {
+  #pageNum {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  #pageNum {
+    font-size: 16px;
+  }
+}

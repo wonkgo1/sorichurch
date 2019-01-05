@@ -1,0 +1,5 @@
+@font-face {
+	font-family: "고양시_고양체";
+	/*src: url( ../fonts/font.eot ); /* IE */
+	src: local("고양시_고양체"), url("fonts/Goyang.TTF") format("truetype");
+}

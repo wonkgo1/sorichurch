@@ -1,0 +1,91 @@
+@import url('header.css');
+
+#content > div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.subject {
+  margin-top: 30px;
+  font-size: 5vw;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted grey;
+}
+.subject:first-child {
+  margin-top: 20px;
+}
+@media screen and (min-width: 500px) {
+  .subject {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .subject {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+  .subject:first-child {
+    margin-top: 25px;
+  }
+}
+
+.subject + p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 4vw;
+}
+@media screen and (min-width: 500px) {
+  .subject + p {
+    font-size: 18px;
+  }
+}
+
+#content > div div:last-child div {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted grey;
+}
+#content > div div:last-child div:last-child {
+  border-bottom: 0;
+}
+#content > div div:last-child div > img {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10vw;
+  max-width: 30px;
+}
+#content > div div:last-child div > p {
+  display: inline-block;
+  width: 85%;
+  margin-left: 15%;
+  font-size: 4vw;
+  line-height: 140%;
+}
+@media screen and (min-width: 500px) {
+  #content > div > div:last-child div > p {
+    font-size: 18px;
+  }
+}
+#content > div > div:last-child > div:last-child > p {
+  width: 97%;
+  margin-left: 3%;
+}
+
+.city_bus {
+  color: white;
+  background: green;
+}
+.bold {
+  font-weight: bold;
+}
+.blue_bus {
+  color: white;
+  background: rgb(53,86,166);
+}

@@ -1,0 +1,135 @@
+<?php
+require_once 'api/header.php';
+require_once 'api/login.php';
+require_once 'api/content.php';
+
+function deleting_content_kind() {
+	$page = $_GET['page'];
+	echo '<div>
+  <p>글 삭제</p>';
+	if ($page === 'forum') {
+		echo '<p>자유게시판</p>';
+	}
+	else if ($page === 'sermon') {
+		echo '<p>주일 5분 설교</p>';
+	}
+	else if ($page === 'weekly_column') {
+		echo '<p>담임목사 칼럼</p>';
+	}
+	else if ($page === 'noti') {
+		echo '<p>교회소식</p>';
+	}
+	else if ($page === 'wednesday_sermon') {
+		echo '<p>수요 5분 설교</p>';
+	}
+	else if ($page === 'proverb') {
+		echo '<p>잠언 3분 설교</p>';
+	}
+	else if ($page === 'ST') {
+		echo '<p>ST 본문 문맥</p>';
+	}
+	else {
+		echo '<p>게시물 관리</p>';
+	}
+  echo '</div>';
+}
+
+function delete_content() {
+	if (isset($_SESSION['logged_in']) && isset($_GET['num'])) {
+		$mysqli = connect();
+		$page = $_GET['page'];
+		$sql = "DELETE FROM ";
+		if ($page === "forum")
+			$sql .= "forum";
+		else if ($page === "sermon") {
+			$sql .= "sermon";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+		else if ($page === "weekly_column") {
+			$sql .= "weekly_column";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+		else if ($page === "noti") {
+			$sql .= "noti";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+		else if ($page === "wednesday_sermon") {
+			$sql .= "wednesday_sermon";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+		else if ($page === "proverb") {
+			$sql .= "proverb";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+		else if ($page === "ST") {
+			$sql .= "ST";
+			if (!($_SESSION['id'] === "sorichurch"))
+				die ("권한이 없는 관리자입니다.");
+		}
+
+		$sql .= " WHERE num=".$_GET['num'].";";
+
+		if (isset($_SESSION['id']) && ($_SESSION['id'] === $_GET['id'] || $_SESSION['id'] === 'sorichurch')) {
+			$result = $mysqli->query($sql) or die($sql);
+
+			if ($result) {
+				echo "글이 성공적으로 지워졌습니다";
+			}
+			else {
+				die("Error: access failed");
+			}
+		}
+		else {
+			die ("작성자가 아닙니다.");
+		}
+	}
+	else {
+		die("로그인을 먼저 해주세요");
+	}
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/std.css">
+    <link rel="stylesheet" href="css/createModify.css">
+  	<link rel="stylesheet"
+  		href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400, 700">
+    <script type='text/javascript' src='js/header.js'></script>
+    <script type='text/javascript' src='js/content.js'></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+    <title>소리교회 - 말씀과 사랑이 넘쳐나는 건강한 교회</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- generate header html codes -->
+      <?php generateHeader("delete") ?>
+
+      <section id="content">
+        <div>
+          <?php
+            // $content = new dbContent("갤러리", 'gallery', 'gallery.php');
+            deleting_content_kind();
+          ?>
+          <button id="scrollToTop" onClick="scrollToTop()">Top</button>
+          <div>
+            <?php
+              delete_content();
+            ?>
+          </div>
+        </div>
+      </section>
+
+      <!-- generate header html codes -->
+      <?php generateFooter() ?>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+@import url('header.css');
+
+.content_subject {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-bottom: 1px dotted grey;
+  font-size: 5vw;
+  line-height: 150%;
+}
+@media screen and (min-width: 500px) {
+  .content_subject {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .content_subject {
+    width: 100%;
+  }
+}
+
+.content_paragraph {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  line-height: 130%;
+  font-size: 4vw;
+}
+@media screen and (min-width: 500px) {
+  .content_paragraph {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .content_paragraph {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+#sori_logo_desp {
+  padding-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#chronicle {
+  display: inline-block;
+  width: 90%;
+  padding-left: 5%;
+  list-style: square;
+  list-style-position: inside;
+  line-height: 120%;
+  white-space: pre-line;
+  font-size: 4vw;
+}
+
+#chronicle > li > span {
+  margin-left: -10px;
+  font-size: 3.5vw;
+}
+
+#chronicle > li > span > span {
+  display: inline-block;
+  width: 93%;
+  margin-left: 7%;
+}
+
+#small_font {
+  font-size: 3vw;
+}
+
+@media screen and (min-width: 500px) {
+  #chronicle {
+    font-size: 20px;
+  }
+  #chronicle > li > span {
+    font-size: 18px;
+  }
+  #small_font {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #chronicle {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 0;
+  }
+  #chronicle > li > span > span {
+    width: 97%;
+    font-size: 14px;
+    margin-left: 3%;
+  }
+  #small_font {
+    font-size: 13px;
+  }
+}

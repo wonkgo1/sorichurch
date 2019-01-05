@@ -1,0 +1,448 @@
+@import url('header.css');
+
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* css for slider's */
+#content > div:nth-child(2) {
+  width: 100%;
+  background-color:#f0f0f0;
+  text-align: center;
+  display: none;
+}
+#content > div:nth-child(2) > div {
+  width: 49%;
+  max-width: 500px;
+  height: 380px;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+}
+#content > div:nth-child(2) > div >img {
+  width: 100%;
+  height: 100%;
+}
+
+#slider_container div {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  transition: 1s;
+}
+
+#slider1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../image/slideshow0.jpeg');
+}
+#slider2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-image: url('../image/slideshow1.jpg');
+}
+#slider3 {
+  position: absolute;
+  top: 0;
+  left: 200%;
+  background-image: url('../image/slideshow2.jpg');
+}
+#slider4 {
+  position: absolute;
+  top: 0;
+  left: 300%;
+  background-image: url('../image/slideshow3.jpg');
+}
+
+#slider_container #prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+  color: white;
+  z-index: 1;
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.6s ease;
+}
+#slider_container #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+  color: white;
+  z-index: 1;
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.6s ease;
+}
+#sliderBullets {
+  position: absolute;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(- 50%);
+  -ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+#sliderBullets span {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+#sliderBullets span.activeBullet {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#slider_container:hover #prev,
+#slider_container:hover #next {
+  display: block;
+}
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 800px) {
+  #content {
+    margin-top: 15px;
+  }
+  #content > div:nth-child(2) {
+    display: block;
+  }
+}
+
+
+#info_box {
+  width: 100%;
+  height: 56.25vw;
+  max-width: 1000px;
+  margin:0 auto;
+}
+
+#worship_info {
+  display: none;
+}
+#pastor_info {
+  display: none;
+}
+#sermon_info {
+  position: relative;
+  width: 100%%;
+  height: 100%;
+}
+#sermon_info p {
+  display: none;
+}
+#sermon_info iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 800px) {
+  #info_box {
+    margin-top: 15px;
+    height: 150px;
+  }
+  #worship_info {
+    display: inline-block;
+    float: left;
+    width: 24%;
+    height: 100%;
+    background-image: url("/image/blue_texture2.jpg");
+    border-radius: 10px;
+  }
+  #worship_info > p {
+    margin-top: 10px;
+    margin-left: 5%;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #worship_info > div {
+    width: 95%;
+    height:115px;
+    background-color:white;
+  	border-radius:10px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  #worship_info > div p {
+    display: inline-block;
+    font-size: 10px;
+  }
+  #worship_time {
+    background-color:#67b7ff;
+  	border-radius:5px;
+  	width:18%;
+  	height:40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    margin-left: 8px;
+    float: left;
+  }
+  #sunday_sermon_time {
+    margin-top: 18px;
+    margin-left: 10px;
+    width: 70%;
+    color: grey;
+  }
+  #wednesday_sermon_time {
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 70%;
+    color: grey;
+  }
+  #worship_info > div > div:first-child {
+    height: 70px;
+  }
+  #group_time {
+    background-color:#67b7ff;
+  	border-radius:5px;
+  	width:18%;
+  	height:25px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    margin-left: 8px;
+    float: left;
+  }
+  #sunday_ST_time {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 70%;
+    color: grey;
+  }
+  .sermon_type {
+    display: inline-block;
+    width: 35%;
+    text-align: left;
+    font-weight: bold;
+  }
+  .sermon_day {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+  }
+
+
+  #pastor_info {
+    display: inline-block;
+    float: left;
+    width: 48%;
+    height: 100%;
+    margin-left: 1%;
+    position: relative;
+  }
+  #pastor_intro0 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #pastor_intro0 a,
+  #pastor_intro0 a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  #pastor_intro1 {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 19px;
+    color: tomato;
+  }
+  #pastor_intro2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 150%;
+  }
+  #pastor_intro3 {
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  #pastor_intro4 {
+    font-size: 18px;
+    letter-spacing: 10px;
+  }
+  #pastor_intro4:before {
+    content: '  ';
+  }
+  #pastor_info img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 33.3%;
+  }
+  #sermon_info {
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+    width: 24%;
+  }
+  #sermon_info p {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #sermon_info iframe {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 80%;
+  }
+}
+@media screen and (min-width: 900px) {
+  #worship_info > div p {
+    font-size: 11px;
+  }
+  #pastor_intro1 {
+    font-size: 21px;
+  }
+  #sunday_sermon_time {
+    margin-left: 12px;
+  }
+  #wednesday_sermon_time {
+    margin-left: 12px;
+  }
+  #sunday_ST_time {
+    margin-left: 12px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #worship_info > div p {
+    font-size: 12px;
+  }
+  #pastor_intro1 {
+    font-size: 24px;
+  }
+  #sunday_sermon_time {
+    margin-left: 15px;
+  }
+  #wednesday_sermon_time {
+    margin-left: 15px;
+  }
+  #sunday_ST_time {
+    margin-left: 15px;
+  }
+}
+
+#noti_box {
+  width: 100%;
+}
+.noti_box {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 4.2vw;
+}
+.noti_box > a,
+.noti_box > a:visited {
+  font-weight: 700;
+  color: grey;
+  text-decoration: none;
+}
+.noti_box > a p span {
+  float: right;
+}
+.noti_box ul {
+  list-style: none;
+  padding-top: 2vw;
+  font-size: 3.8vw;
+}
+.noti_box ul li {
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-bottom: 1px dotted grey;
+}
+
+.noti_content a,
+.noti_content a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+  .noti_box {
+    width: 43.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: inline-block;
+    font-size: 18px;
+  }
+  .noti_box ul {
+    font-size: 16px;
+  }
+  .noti_box ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (min-width: 800px) {
+  #noti_box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+  }
+  .noti_box {
+    width: 21.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-size: 16px;
+    display: table-cell;
+  }
+  .noti_box > a,
+  .noti_box > a:visited {
+    color: black;
+  }
+  .noti_box > a p span {
+    margin-right: 10px;
+  }
+  .noti_box ul {
+    list-style: inside;
+    padding-top: 0px;
+  }
+  .noti_box ul li:first-child {
+    padding-top: 10px;
+  }
+  .noti_box ul li {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border: 0;
+  }
+  .noti_box ul li:hover {
+    color: tomato;
+  }
+}
