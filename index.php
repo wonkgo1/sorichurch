@@ -27,7 +27,7 @@ $db = new fromDb();
             <img src="image/interior.jpeg">
           </div>
           <div id="slider_container">
-            <div id="slider1" class="slideshow"
+            <div id="slider4" class="slideshow"
               style="position: absolute; top: 0; left: 0%;"
             ></div>
 
@@ -39,16 +39,11 @@ $db = new fromDb();
               style="position: absolute; top: 0; left: 200%;"
             ></div>
 
-            <div id="slider4" class="slideshow"
-              style="position: absolute; top: 0; left: 300%;"
-            ></div>
-
             <span id="prev" onClick="prevSlide()">&#10094;</span>
             <span id="next" onClick="nextSlide()">&#10095;</span>
 
             <p id="sliderBullets">
               <span class="activeBullet"></span>
-              <span></span>
               <span></span>
               <span></span>
             </p>

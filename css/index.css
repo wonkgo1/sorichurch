@@ -37,12 +37,6 @@
   transition: 1s;
 }
 
-#slider1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url('../image/slideshow0.jpeg');
-}
 #slider2 {
   position: absolute;
   top: 0;
@@ -58,7 +52,7 @@
 #slider4 {
   position: absolute;
   top: 0;
-  left: 300%;
+  left: 0;
   background-image: url('../image/slideshow3.jpg');
 }
 

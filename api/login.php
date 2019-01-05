@@ -6,7 +6,7 @@ function start_session() {
 }
 
 function connect() {
-	$host = 'uws64-249.cafe24.com';
+	$host = 'localhost';
 	$user = 'sorichurch';
 	$password = 'sc141735';
 	$db = 'sorichurch';
