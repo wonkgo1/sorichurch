@@ -55,10 +55,10 @@ function outlogin($skin_dir='basic')
     $outlogin_action_url = G5_HTTPS_BBS_URL.'/login_check.php';
     
     ob_start();
-    if ($is_member)
-        include_once ($outlogin_skin_path.'/outlogin.skin.2.php');
-    else // 로그인 전이라면
-        include_once ($outlogin_skin_path.'/outlogin.skin.1.php');
+    // // if ($is_member)
+    // //     include_once ($outlogin_skin_path.'/outlogin.skin.2.php');
+    // // else // 로그인 전이라면
+    // //     include_once ($outlogin_skin_path.'/outlogin.skin.1.php');
     $content = ob_get_contents();
     ob_end_clean();
 
